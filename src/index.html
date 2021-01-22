@@ -5,9 +5,20 @@
   <title>TestApp</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,500,500i,700" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
   <app-root></app-root>
+  <script>
+    document.addEventListener('click',  (event) => {
+      event.stopPropagation();
+
+      let label = event.target.matches("label") && event.target;
+      if (label) {
+        label.parentElement.querySelector(".checkbox").click();
+      }
+    })
+  </script>
 </body>
 </html>

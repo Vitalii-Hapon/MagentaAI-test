@@ -1,0 +1,31 @@
+<section>
+  <div class="card-wrapper">
+    <div class="card-image">
+      <img src="{{campaign.image}}" alt="Doggo"/>
+    </div>
+
+    <div class="card__info">
+      <h3>
+        {{campaign.title}}
+      </h3>
+
+      <input type="checkbox" name="trigger" id="{{campaign.id}}">
+      <label class="trigger-arrow" [for] = "campaign.id">
+        <span></span>
+      </label>
+
+      <div class="card__info__extra">
+        <p>
+          {{campaign.description}}
+        </p>
+
+        <div class="card__action">
+          <a class="button" href="#">
+            Go for it!
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
